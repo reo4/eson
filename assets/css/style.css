@@ -1,0 +1,25 @@
+dark, .navbar[data-bs-theme=dark] {
+    --bs-navbar-color: white;
+}
+
+nav{ 
+    background-color: #212529;
+}
+
+.footer{
+    border-top: 1px solid #e3e9ef;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 20px;
+}
+.footer .wrapper {
+    text-align: center;
+}
+
+.step {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e3e9ef;
+    border-radius: 5px;
+}
