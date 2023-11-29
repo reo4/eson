@@ -47,43 +47,43 @@
             </div>
         </nav>
         <div class="container mt-3">
-            <form>
+            <form action="/api/send" method="get">
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">إشعار انقطاع الخدمة الكهربائية عن</span>
-                        <input v-model="total" type="number" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input v-model="total" type="number" name="total" class="form-control" />
                         <span class="input-group-text">مشترك</span>
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span  class="input-group-text">كبار المشتركين المتأثرين</span>
-                        <input v-model="vip" type="number" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input v-model="vip" type="number" name="vip" class="form-control" />
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">الموقع</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input type="text" class="form-control" name="location" />
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">المحطة</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input type="text" class="form-control" name="station" />
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">المغذي</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input type="text" class="form-control" name="feeder" />
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">مصدر العلم بالانقطاع</span>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>أختر </option>
+                        <select class="form-select" name="source_interrupted">
+                            <option value="" selected>أختر </option>
                             <option value="SCADA">SCADA</option>
                             <option value="C.Center">C.Center</option>
                             <option value="PCC">PCC</option>
@@ -94,25 +94,25 @@
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">التاريخ</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input type="text" name="date" class="form-control" />
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">وقت الانقطاع</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input type="text" name="time" class="form-control" />
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">عدد المفاتيح الذكيه على المغذي</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input type="number" name="keys_numbers" class="form-control" />
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">عدد الاستفاده من المفاتيح الذكيه</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input type="number" name="uses_number" class="form-control" />
                     </div>
                 </div>
                 <div class="mb-3">
@@ -130,19 +130,19 @@
                     <div class="mb-3">
                         <div class="input-group">
                             <span class="input-group-text">وقت التشغيل</span>
-                            <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                            <input type="text" name="fs_time" class="form-control" />
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="input-group">
                             <span class="input-group-text">عدد المشتركين</span>
-                            <input v-model="fs_total" type="number" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                            <input v-model="fs_total" name="fs_total" type="number" class="form-control" />
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="input-group">
                             <span class="input-group-text">المتبقي</span>
-                            <input :value="fs_rest || null" type="number" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                            <input :value="fs_rest || null" disabled name="fs_rest" type="number" class="form-control" />
                         </div>
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                     <div class="mb-3">
                         <div class="input-group">
                             <span class="input-group-text">وقت التشغيل</span>
-                            <input  type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                            <input  type="text" name="time_step[]" class="form-control" />
                         </div>
                     </div>
                     <div class="mb-3">
@@ -175,27 +175,27 @@
                                 $refs.rests[index].value = fs_rest - e.target.value : 
                                 $refs.rests[index].value =  $refs.rests[index - 1].value - e.target.value
                             }" 
-                                type="number" class="form-control"
+                                type="number" name="total_step[]" class="form-control"
                             />
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="input-group">
                             <span class="input-group-text">المتبقي</span>
-                            <input ref="rests" type="number" class="rest form-control" />
+                            <input ref="rests" type="number" name="rest_step[]" disabled class="rest form-control" />
                         </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">سبب الانقطاع:</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input type="text" name="interruption_reason" class="form-control" />
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="input-group">
                         <span class="input-group-text">الاجراء المتخذ :</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <input type="text" name="action_taken" class="form-control" />
                     </div>
                 </div>
                 <div class="d-grid gap-2">

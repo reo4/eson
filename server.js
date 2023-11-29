@@ -17,8 +17,8 @@ const db = low(adapter)
 const edge = new Edge({ cache: false })
 edge.mount(path.join(__dirname, './views'))
 
-app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/assets', express.static(path.join(__dirname, '/assets')))
 
 app.use(methodOverride(function (req, res) {
@@ -45,6 +45,12 @@ app.post('/api/steps', (req, res) => {
 app.delete('/api/steps/:id', (req, res) => {
   db.get('steps').remove({ id: req.params.id }).write()
   res.redirect("back")
+})
+
+app.get('/api/send', (req, res) => {
+  const msg = edge.renderSync('wa_message', req.query)
+  // res.send(req.query)
+  res.redirect(msg)
 })
 
 app.listen(port, () => {
