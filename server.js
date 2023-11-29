@@ -1,11 +1,10 @@
 const express = require('express')
 const path = require('path')
-var bodyParser = require('body-parser')
-var methodOverride = require('method-override')
+const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 const { Edge } = require('edge.js')
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
-const shortid = require('shortid')
 
 
 const app = express()
@@ -13,6 +12,7 @@ const port = 3000
 
 const adapter = new FileSync('db.json')
 const db = low(adapter)
+
 
 const edge = new Edge({ cache: false })
 edge.mount(path.join(__dirname, './views'))
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 
 app.post('/api/steps', (req, res) => {
   db.get('steps').push({
-    id: shortid.generate(),
+    id: db.get('steps').size().value() + 1,
     title: req.body.title
   }).write()
   res.redirect('back')
