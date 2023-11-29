@@ -13,124 +13,119 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">⚡ إشعار انقطاع الخدمة الكهربائية</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            إعدادت
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">التفضيلات</a></li>
-                            <li><a class="dropdown-item" href="#">الاختيارات</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container mt-3">
-        <form>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">إشعار انقطاع الخدمة الكهربائية عن</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                    <span class="input-group-text">مشترك</span>
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">كبار المشتركين المتأثرين</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">الموقع</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">المحطة</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">المغذي</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">مصدر العلم بالانقطاع</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">التاريخ</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">وقت الانقطاع</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">عدد المفاتيح الذكيه على المغذي</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">عدد الاستفاده من المفاتيح الذكيه</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#create-step-modal">
-                    <i class="bi-plus"></i> 
-                    انشاء خطوة
+<body >
+    <div id="app">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">⚡ إشعار انقطاع الخدمة الكهربائية</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                إعدادت
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">التفضيلات</a></li>
+                                <li><a class="dropdown-item" href="#">الاختيارات</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            @each(step in steps)
+        </nav>
+        <div class="container mt-3">
+            <form>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">إشعار انقطاع الخدمة الكهربائية عن</span>
+                        <input v-model="total" type="number" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        <span class="input-group-text">مشترك</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span  class="input-group-text">كبار المشتركين المتأثرين</span>
+                        <input v-model="vip" type="number" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">الموقع</span>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">المحطة</span>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">المغذي</span>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">مصدر العلم بالانقطاع</span>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>أختر </option>
+                            <option value="SCADA">SCADA</option>
+                            <option value="C.Center">C.Center</option>
+                            <option value="PCC">PCC</option>
+                            <option value="Customer">Customer</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">التاريخ</span>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">وقت الانقطاع</span>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">عدد المفاتيح الذكيه على المغذي</span>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">عدد الاستفاده من المفاتيح الذكيه</span>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button @click="step++" type="button" class="btn btn-dark btn-sm">
+                        <i class="bi-plus"></i>
+                        انشاء خطوة
+                    </button>
+                </div>
                 <div class="step">
                     <div class="mb-3">
                         <p class="fw-bold d-flex justify-content-between">
-                            <span>الخطوة الاولي : {{step.title}}</span>
-                            <button 
-                                class="btn btn-dark btn-sm mr-auto"
-                                type="button" 
-                                data-bs-toggle="modal" 
-                                data-bs-target="#delete-step-modal"
-                                data-bs-id="{{step.id}}"
-                            >
-                                <i class="bi-trash3-fill"></i>
-                            </button>
+                            <span>الخطوة الاولي : الحالة</span>
                         </p>
-
                     </div>
                     <div class="mb-3">
                         <div class="input-group">
@@ -141,33 +136,77 @@
                     <div class="mb-3">
                         <div class="input-group">
                             <span class="input-group-text">عدد المشتركين</span>
-                            <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                            <input v-model="fs_total" type="number" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text">المتبقي</span>
+                            <input :value="fs_rest || null" type="number" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
                         </div>
                     </div>
                 </div>
-            @end
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">سبب الانقطاع:</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="mb-3">
-                <div class="input-group">
-                    <span class="input-group-text">الاجراء المتخذ :</span>
-                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
-                </div>
-            </div>
-            <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-block btn-dark"><i class="bi-whatsapp me-1"></i> إرسال</button>
-            </div>
-        </form>
-    </div>
+                <div class="step" v-for="(i,index) in step" :key="index">
+                    <div class="mb-3">
+                        <p class="fw-bold d-flex justify-content-between">
+                            <span>الخطوة @{{steps[i - 1]}}</span>
+                            <button 
+                                class="btn btn-dark btn-sm mr-auto"
+                                type="button"
+                                @click="step--"
+                            >
+                                <i class="bi-trash3-fill"></i>
+                            </button>
+                        </p>
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text">وقت التشغيل</span>
+                            <input  type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text">عدد المشتركين</span>
 
-
-    <div class="footer">
-        <div class="container">
-            <div class="wrapper">2023 Faisal Alsunayni &copy;</div>
+                            <input 
+                            @input="e => {
+                                index === 0 ? 
+                                $refs.rests[index].value = fs_rest - e.target.value : 
+                                $refs.rests[index].value =  $refs.rests[index - 1].value - e.target.value
+                            }" 
+                                type="number" class="form-control"
+                            />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text">المتبقي</span>
+                            <input ref="rests" type="number" class="rest form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">سبب الانقطاع:</span>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">الاجراء المتخذ :</span>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" />
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-block btn-dark"><i class="bi-whatsapp me-1"></i> إرسال</button>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="wrapper">2023 Faisal Alsunayni &copy;</div>
+            </div>
         </div>
     </div>
 
@@ -176,11 +215,36 @@
     @include('partials/modals/create-step')
     @include('partials/modals/delete-step')
 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp } = Vue
+        createApp({
+            data() {
+                return {
+                    steps: [
+                        'الثانية',
+                        'الثالثة',
+                        'الرابعة',
+                        'الخامسة',
+                        'السادسة',
+                        'السابعة',
+                        'الثامنة',
+                        'العاشرة',
+                    ],
+                    step: 0,
+                    total: null,
+                    vip: null,
+                    fs_total: null
+                }
+            },
+            computed: {
+                fs_rest(){
+                    return this.total + this.vip - this.fs_total
+                }
+            }
+        }).mount('#app')
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
-    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
